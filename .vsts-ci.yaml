@@ -30,7 +30,7 @@ steps:
   inputs:
     command: custom
     custom: nuget
-    arguments: push $(System.ArtifactStagingDirectory)/packages/*.nupkg --source https://www.myget.org/F/lodejard-greeting/api/v3/index.json --no-service-endpoint --api-key $(myget-apikey)
+    arguments: push $(Build.ArtifactStagingDirectory)/packages/*.nupkg --source https://www.myget.org/F/lodejard-greeting/api/v3/index.json --no-service-endpoint --api-key $(myget-apikey)
 
 - task: PublishBuildArtifacts@1
   displayName: publish artifacts
